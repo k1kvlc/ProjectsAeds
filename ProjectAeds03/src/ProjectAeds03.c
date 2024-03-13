@@ -3,8 +3,8 @@
  Name        : ProjectAeds03
  Author      : k1
  Version     : 0.1
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Copyright   : @k1kvlc
+ Description : Recursivo
  ============================================================================
  */
 //Função recursiva em uma linha utilizando operador ternário
