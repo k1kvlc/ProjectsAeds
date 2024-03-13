@@ -3,8 +3,8 @@
  Name        : ProjectAeds04.c
  Author      : k1
  Version     : 0.1
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Copyright   : @k1kvlc
+ Description : Soma de ns
  ============================================================================
  */
 
