@@ -1,10 +1,10 @@
 /*
  ============================================================================
  Name        : ProjetoAeds01.c
- Author      : k1kvlc
+ Author      : k1
  Version     : 0.1
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Copyright   : @k1kvlc
+ Description : variáveis idade
  ============================================================================
  */
 
