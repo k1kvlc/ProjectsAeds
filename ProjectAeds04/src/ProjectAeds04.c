@@ -4,33 +4,53 @@
  Author      : k1
  Version     : 0.1
  Copyright   : @k1kvlc
- Description : Soma de ns
+ Description : Desafio
  ============================================================================
  */
 
-// Função para calcular a soma de quatro númeoros inteiros
-
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-int calcularSoma(int num1, int num2, int num3, int num4) {
-	return num1 + num2 + num3 + num4;
+int main() {
+    int portaPremiada, portaEscolhida, portaMostrada, trocarPorta;
+    char opcao;
+
+    // Inicializa a semente para a função rand() usando o tempo atual
+    srand(time(NULL));
+
+    // Sortear a porta premiada
+    portaPremiada = rand() % 3 + 1;
+
+    // Solicitar ao jogador que escolha uma porta
+    printf("Escolha uma porta (1, 2, 3): ");
+    scanf("%d", &portaEscolhida);
+
+    // Monty abre uma porta que não é a premiada e não foi escolhida pelo jogador
+    do {
+        portaMostrada = rand() % 3 + 1;
+    } while (portaMostrada == portaEscolhida || portaMostrada == portaPremiada);
+
+    printf("Monty abre a porta %d e lá há um bode.\n", portaMostrada);
+
+    // Perguntar ao jogador se quer trocar de porta
+    printf("Você quer trocar de porta? (s/n): ");
+    scanf(" %c", &opcao); // espaço antes de %c para ignorar qualquer espaço em branco no buffer
+
+    if (opcao == 's' || opcao == 'S') {
+        trocarPorta = 6 - portaEscolhida - portaMostrada; // Soma das portas é 6, então isso encontra a terceira porta
+        portaEscolhida = trocarPorta;
+        printf("Você agora escolheu a porta %d.\n", portaEscolhida);
+    } else {
+        printf("Você manteve sua escolha inicial, porta %d.\n", portaEscolhida);
+    }
+
+    // Revelar se o jogador ganhou ou perdeu
+    if (portaEscolhida == portaPremiada) {
+        printf("Parabéns! Você ganhou um carro!\n");
+    } else {
+        printf("Que pena! Você encontrou um bode.\n");
+    }
+
+    return 0;
 }
-
-int main(void) {
-	//Jeito 1
-	//int resultadoSoma = calcularSoma(2, 3, 5, 7);
-	//printf("1) A soma dos números é: %d\n", resultadoSoma);
-
-	//Jeito 2
-	int numero = 0;
-	int soma = 0;
-	for(int i =1; i <= 4; i++){
-		printf("Digite o número para ser somado: ");
-		//fflsush(stdout)
-		scanf("%d", &numero);
-		soma = soma + numero;
-	}
-	printf("\nA soma é: %d", soma);
-}
-
