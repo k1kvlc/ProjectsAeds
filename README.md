@@ -1,13 +1,13 @@
 # ProjectsAeds
 Projects Algoritmos e Estruturas de Dados Ⅰ
 
-ProjectAeds01 - x
+ProjectAeds01 - x 0.1
 
 ProjectAeds02 - Soma de números limitados 0.1
 
 ProjectAeds03 - Função recursiva 0.1
 
-ProjectAeds04 - Desafio
+ProjectAeds04 - Desafio 0.1
 
 ProjectAeds05 - 
 
