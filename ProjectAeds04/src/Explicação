@@ -71,3 +71,121 @@ if (portaEscolhida == portaPremiada) {
 
 ### Conclusão
 Este programa utiliza lógica condicional (`if`), repetição (`do-while`), entrada/saída padrão (`printf` e `scanf`), e geração de números aleatórios para simular o jogo do Monty Hall, onde a probabilidade e a psicologia jogam papéis cruciais na decisão do jogador de manter ou trocar sua escolha inicial.
+
+
+------------------------------------------------------------------
+
+
+Claro! Vamos detalhar cada parte do código que escrevi para o jogo do Monty Hall, explicando cada função e conceito de uma maneira acessível para um iniciante em programação. Isso vai ajudar a entender como o programa funciona e o que cada linha de código faz.
+
+### 1. Cabeçalhos e Bibliotecas
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+```
+- `#include` é uma diretiva usada em C para incluir as funcionalidades de bibliotecas padrão ou externas no programa. Isso permite usar funções que foram previamente escritas por outras pessoas.
+- `stdio.h` contém funções de entrada e saída, como ler do teclado e escrever na tela.
+- `stdlib.h` contém funções para gerar números aleatórios, converter dados, e outras utilidades.
+- `time.h` contém funções que lidam com datas e horários, e é usada aqui para ajudar a gerar números aleatórios.
+
+### 2. Inicialização do Gerador de Números Aleatórios
+```c
+srand(time(NULL));
+```
+- `srand` é uma função que define a semente do gerador de números aleatórios. A semente é um ponto de partida para a sequência de números aleatórios.
+- `time(NULL)` retorna o tempo atual em segundos desde 1 de janeiro de 1970, e é usado aqui como semente. Isso garante que cada vez que você executar o programa, ele produzirá uma sequência diferente de números aleatórios.
+
+### 3. Sorteio da Porta Premiada
+```c
+portaPremiada = rand() % 3 + 1;
+```
+- `rand()` gera um número aleatório grande.
+- `% 3` calcula o resto da divisão desse número por 3, resultando em um valor entre 0 e 2.
+- Adicionando 1, ajustamos o intervalo para 1 a 3, que são as três portas disponíveis no jogo.
+
+### 4. Entrada do Jogador
+```c
+printf("Escolha uma porta (1, 2, 3): ");
+scanf("%d", &portaEscolhida);
+```
+- `printf` exibe uma mensagem pedindo ao jogador para escolher uma porta.
+- `scanf` lê a resposta do usuário. `%d` diz que estamos esperando um número inteiro, e `&portaEscolhida` é o endereço da variável onde esse número será armazenado.
+
+### 5. Monty Abre uma Porta Não Premiada
+```c
+do {
+    portaMostrada = rand() % 3 + 1;
+} while (portaMostrada == portaEscolhida || portaMostrada == portaPremiada);
+```
+- Isso é um loop `do-while`, que continua executando o bloco de código até que a condição no `while` seja falsa.
+- Monty escolhe aleatoriamente uma porta para abrir que não seja nem a premiada nem a escolhida pelo jogador.
+
+### 6. Pergunta sobre Trocar de Porta
+```c
+printf("Você quer trocar de porta? (s/n): ");
+scanf(" %c", &opcao);
+```
+- Aqui, o jogador é perguntado se quer trocar a porta escolhida por outra.
+- O espaço antes de `%c` no `scanf` ajuda a ignorar espaços em branco ou novas linhas que podem ter sido deixadas no buffer de entrada.
+
+### 7. Decisão de Trocar de Porta
+```c
+if (opcao == 's' || opcao == 'S') {
+    trocarPorta = 6 - portaEscolhida - portaMostrada;
+    portaEscolhida = trocarPorta;
+}
+```
+- `if` verifica se o jogador quer trocar de porta ('s' ou 'S' para sim).
+- Se sim, a porta é trocada pela que ainda está fechada e não foi escolhida nem aberta.
+
+### 8. Resultado Final
+```c
+if (portaEscolhida == portaPremiada) {
+    printf("Parabéns! Você ganhou um carro!\n");
+} else {
+    printf("Que pena! Você encontrou um bode.\n");
+}
+```
+- Aqui, o programa verifica se a porta escolhida pelo jogador é a porta premiada.
+- Dependendo disso, o programa exibe se o jogador ganhou o carro ou não.
+
+-----------------------------------------------------------
+
+A variável `char opcao` no programa do jogo Monty Hall serve para capturar a decisão do jogador sobre se deseja ou não trocar a porta escolhida inicialmente por outra porta ainda fechada. Esse é um momento crucial no jogo, pois a escolha de trocar ou não pode influenciar diretamente no resultado final do jogo.
+
+### Como Funciona
+
+Quando o programa pergunta ao jogador se ele quer trocar de porta após Monty Hall abrir uma das portas não escolhidas (mostrando que lá não está o prêmio), o jogador pode responder de duas maneiras:
+- **'s' ou 'S'**: Significa que o jogador deseja trocar a porta escolhida pela outra porta que ainda está fechada.
+- **'n' ou 'N'**: Significa que o jogador prefere manter sua escolha original, ou seja, não trocar de porta.
+
+A variável `char` é usada aqui porque a resposta esperada é um único caractere. `char` é o tipo de dado em C adequado para armazenar caracteres individuais.
+
+### Uso no Código
+
+Aqui está como isso é implementado no código:
+
+```c
+printf("Você quer trocar de porta? (s/n): ");
+scanf(" %c", &opcao);
+```
+
+- `printf` é usado para exibir a pergunta ao usuário.
+- `scanf(" %c", &opcao)` é a função que lê a resposta do usuário do teclado. O espaço em branco antes do `%c` é crucial porque ele instrui o `scanf` a ignorar qualquer espaço em branco ou caracteres de nova linha que possam estar pendentes no buffer de entrada, garantindo que o próximo caractere não em branco seja lido e armazenado em `opcao`.
+
+### Decisão com Base na Resposta
+
+Dependendo do valor de `opcao`, o programa decide se mantém a porta escolhida originalmente ou se troca pela única porta restante que ainda está fechada:
+
+```c
+if (opcao == 's' || opcao == 'S') {
+    trocarPorta = 6 - portaEscolhida - portaMostrada; // Calcula a porta restante
+    portaEscolhida = trocarPorta; // Troca a porta
+} else {
+    // Mantém a porta originalmente escolhida
+    printf("Você manteve sua escolha inicial, porta %d.\n", portaEscolhida);
+}
+```
+
+Essa lógica permite ao jogador ter um controle significativo sobre sua estratégia no jogo, influenciando diretamente no resultado do jogo, baseado na teoria das probabilidades do Problema de Monty Hall.
