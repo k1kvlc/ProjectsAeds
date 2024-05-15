@@ -11,15 +11,15 @@ ProjectAeds04 - Desafio 0.1
 
 ProjectAeds05 - Soma 4 números 0.1
 
-ProjectAeds06 - x
+ProjectAeds06 - Estudo
 
-ProjectAeds07 - x
+ProjectAeds07 - Estudo
 
 ProjectAeds08 - Conversão Temporal 0.1
 
 PrejectAeds09 - Maior entre 2 números 0.1
 
-PrejectAeds10 -
+PrejectAeds10 - Custo
 
 PrejectAeds11 -
 
