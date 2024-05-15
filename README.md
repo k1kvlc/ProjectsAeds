@@ -11,10 +11,24 @@ ProjectAeds04 - Desafio 0.1
 
 ProjectAeds05 - Soma 4 números 0.1
 
-ProjectAeds06 - 
+ProjectAeds06 - x
 
-ProjectAeds07 -
+ProjectAeds07 - x
 
 ProjectAeds08 - Conversão Temporal 0.1
 
 PrejectAeds09 - Maior entre 2 números 0.1
+
+PrejectAeds10 -
+
+PrejectAeds11 -
+
+PrejectAeds12 -
+
+PrejectAeds13 -
+
+PrejectAeds14 -
+
+PrejectAeds15 -
+
+PrejectAeds16 -
