@@ -17,18 +17,14 @@ ProjectAeds07 - Estudo
 
 ProjectAeds08 - Conversão Temporal 0.1
 
-PrejectAeds09 - Maior entre 2 números 0.1
+ProjectAeds09 - Maior entre 2 números 0.1
 
-PrejectAeds10 - Custo
+ProjectAeds10 - Custo
 
-PrejectAeds11 -
+ProjectAeds11 - Att
 
-PrejectAeds12 -
+ProjectAeds12 - Att
 
-PrejectAeds13 -
+ProjectAedsMaratonaCartas - Cartas C/D/N 
 
-PrejectAeds14 -
 
-PrejectAeds15 -
-
-PrejectAeds16 -
