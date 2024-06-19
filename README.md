@@ -29,7 +29,7 @@ ProjectAedsMaratonaCartas - Cartas C/D/N
 
 ProjectAedsMaratonaDireção - Direção a = norte  b = leste c = oeste d = sul
 
-ProjectAedsZero - 
+ProjectAedsZero - Zeros
 
 
 
