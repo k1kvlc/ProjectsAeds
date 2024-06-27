@@ -31,5 +31,6 @@ ProjectAedsMaratonaDireção - Direção a = norte  b = leste c = oeste d = sul
 
 ProjectAedsZero - Zeros
 
+ProjectAedsHotel - Trabalho 10 pontos documentado
 
 
