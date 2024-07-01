@@ -1,6 +1,6 @@
 # Trabalho de Aeds - Hotel Descanso Garantido
 
-* Nome
+* Kaiky/Heleno
    
 ## Descrição
 
@@ -47,3 +47,7 @@ Digite a opcao desejada:
 ## Quartos
 
 * É importante ressaltar que oos quartos do hotel já estão cadastrados no arquivo txt chamado quartos, sendo possivel adicionar novos caso necessário.
+
+## Observação
+
+* Vídeo de amostragem Google Drive ( https://drive.google.com/drive/folders/1Fe3uqd3EScryfTVtYyVuOWsLy_vIjTK6?usp=sharing )
